@@ -69,16 +69,26 @@ a.project__btn:hover {
   background-color: #f9004d;
   border: 2px solid #f9004d;
 }
-button.btn {
-  padding: 15px 20px;
-  font-size: 18px;
+.btn_details {
+  border: 2px solid #ffffff87 !important;
+  border-radius: 5px !important;
+
+  transition: 0.4s ease !important;
+}
+.btn_details:hover {
+  background-color: #f9004d;
+  border: 2px solid #f9004d;
+}
+.btn {
+  /* padding: 15px 20px; */
+  /* font-size: 18px; */
   font-weight: 500;
   border-radius: 5px;
   border: 2px solid #f9004d;
   background-color: #f9004d;
   color: #fff !important;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  /* text-transform: uppercase; */
+  /* letter-spacing: 2px; */
   transition: 0.4s all ease;
 }
 button.view__more:hover {

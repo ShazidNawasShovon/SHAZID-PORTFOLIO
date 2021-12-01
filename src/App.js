@@ -1,29 +1,35 @@
-import About from "../src/About/About";
 import "./App.css";
 
-import Contact from "../src/Contact/Contact";
 import Footer from "../src/Footer/Footer";
-import Home from "../src/Home/Home";
-import Project from "../src/Projects/Project";
-import Service from "../src/Services/Service";
 
 import Header from "./Header/Header";
 
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Home from "../src/Home/Home";
+import DetailProject from "./DetailProject/DetailProject";
+import NotFound from "./NotFound/NotFound";
+import Project from "./Projects/Project";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Header />
-        <Home />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/home">
+            <Home />
+          </Route>
 
-        <About />
-
-        <Service />
-        <Project />
-
-        <Contact />
+          <Route path="/DetailProject/:ProjectId">
+            <DetailProject />
+          </Route>
+          <Route exact path="*">
+            <NotFound />
+          </Route>
+        </Switch>
         <Footer />
       </BrowserRouter>
     </div>
